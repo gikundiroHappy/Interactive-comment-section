@@ -4,14 +4,9 @@ import CommentInput from "./components/CommentInput";
 
 const App: React.FC = () => {
   return (
-    <div
-      className="bg-gray-100  sm:py-20 sm:px-10 font-abc
-    sm:bg-yellow-300 md:bg-green-300 lg:bg-pink-300 xl:bg-blue-300 2xl:bg-red-300
-    "
-    >
+    <div className=" bg-gray-100 sm:py-20 sm:px-10 md:px-20 lg:px-40 font-abc">
       <CommentList />
-      <CommentList />
-      {/* <CommentInput /> */}
+      <CommentInput />
     </div>
   );
 };
