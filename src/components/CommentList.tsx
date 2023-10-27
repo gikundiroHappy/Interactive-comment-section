@@ -3,8 +3,14 @@ import React from "react";
 import { GrAdd, GrFormEdit } from "react-icons/gr";
 import { BiMinus } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
+import { Comment } from "../App";
 
-const CommentInput = () => {
+export interface CommentListProps {
+  comments: Comment[];
+  setComments: (comments: Comment[]) => void;
+}
+
+const CommentList: React.FC<CommentListProps> = ({ comments, setComments }) => {
   return (
     <div className="grid sm:grid-cols-5 md:flex gap-8 bg-white rounded-md p-4 sm:p-5 sm:text-sm m-2 mt-8">
       <div className="p-10 hidden sm:block bg-gray-100 col-span-1 md:col-span-1 w-10 py-10 px-8 text-center space-y-10 rounded-md">
@@ -22,7 +28,7 @@ const CommentInput = () => {
           <div className="grid sm:gap-10 sm:flex grid-cols-4 col-span-2">
             <div className="col-span-1 ml-3 sm:ml-0">
               <img
-                src="../../public/Images/profile2.jpeg"
+                src="Images/profile2.jpeg"
                 alt="profile picture"
                 className="w-10 h-10 sm:w-20 sm:h-20 rounded-full object-cover"
               />
@@ -84,4 +90,4 @@ const CommentInput = () => {
   );
 };
 
-export default CommentInput;
+export default CommentList;
